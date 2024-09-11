@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+   repository: weather
+   tag: "0.0.3"
+   pullPolicy: IfNotPresent
+
+service:
+   type: NodePort
+   port: 5000
+   targetPort: 5000
+   nodePort: 30001

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: "{{ .Release.Name }}-deployment"
+   namespace: weather-web
+   labels:
+      app: weather
+spec:
+   replicas: {{ .Values.replicaCount }}
+   selector:
+      matchLabels:
+         app: weather
+   template:
+      metadata:
+         labels:
+            app: weather
+      spec:
+         containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.pullPolicy }}
