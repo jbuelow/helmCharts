@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  weather:
+  - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2024-09-12T22:21:10.293377127Z"
+    description: A Helm chart for Kubernetes
+    digest: cba53175526af5892f8319befc43a1dc0035ca08bf0d514087ec92ed486b4f2d
+    icon: https://forecast.weather.gov/build/images/header/noaa.d87e0251.png
+    name: weather
+    type: application
+    urls:
+    - weather-0.0.3.tgz
+    version: 0.0.3
+generated: "2024-09-12T22:21:10.293082834Z"
