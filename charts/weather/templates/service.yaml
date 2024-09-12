@@ -4,7 +4,8 @@ metadata:
    name: "{{ .Release.Name }}-service"
 spec:
    selector:
-      labels: {{ .Release.Name }}
+      labels: 
+         app: {{ .Release.Name }}
    type: {{ .Values.service.type }}
    ports:
       - port: {{ .Values.service.port }}
