@@ -4,7 +4,7 @@ metadata:
    name: "{{ .Release.Name }}-service"
 spec:
    selector:
-      app.kubernetes.io/instance: {{ .Release.Name }}
+      labels: {{ .Release.Name }}
    type: {{ .Values.service.type }}
    ports:
       - port: {{ .Values.service.port }}

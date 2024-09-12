@@ -4,16 +4,16 @@ metadata:
    name: "{{ .Release.Name }}-deployment"
    namespace: {{ .Release.Namespace }}
    labels:
-      app: weather
+      app: {{ .Release.Name }}
 spec:
    replicas: {{ .Values.replicaCount }}
    selector:
       matchLabels:
-         app: weather
+         app: {{ .Release.Name }}
    template:
       metadata:
          labels:
-            app: weather
+            app: {{ .Release.Name }}
       spec:
          containers:
             - name: {{ .Chart.Name }}
