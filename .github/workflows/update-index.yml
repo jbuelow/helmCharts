@@ -23,6 +23,8 @@ jobs:
          
          # Updates Index file
          -  name: Update Index
+            env:
+               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             run: |
                helm repo index .
                git config --local user.email "action@github.com"
